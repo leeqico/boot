@@ -11,4 +11,5 @@ public interface SysUserService {
 
     List<SysUser> list();
 
+    SysUser getUserByName(String username);
 }

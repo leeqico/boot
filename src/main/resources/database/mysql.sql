@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS sys_user;
 CREATE TABLE `sys_user` (
   `id` varchar(32) NOT NULL COMMENT '主键id',
-  `user_name` varchar(100) NOT NULL COMMENT '用户名',
+  `username` varchar(100) NOT NULL COMMENT '用户名',
   `password` varchar(100) NOT NULL COMMENT '密码',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户表';
