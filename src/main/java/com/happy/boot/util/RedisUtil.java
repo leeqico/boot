@@ -2,7 +2,6 @@ package com.happy.boot.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -69,7 +68,6 @@ public class RedisUtil {
 	 * 
 	 * @param key 可以传一个值 或多个
 	 */
-	@SuppressWarnings("unchecked")
 	public void del(String... key) {
 		if (key != null && key.length > 0) {
 			if (key.length == 1) {
@@ -106,7 +104,6 @@ public class RedisUtil {
 			e.printStackTrace();
 			return false;
 		}
-
 	}
 
 	/**
@@ -404,8 +401,8 @@ public class RedisUtil {
 			return 0;
 		}
 	}
-	// ===============================list=================================
 
+	// ===============================list=================================
 	/**
 	 * 获取list缓存的内容
 	 * 

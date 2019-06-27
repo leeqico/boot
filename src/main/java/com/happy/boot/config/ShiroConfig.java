@@ -20,11 +20,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author: Scott
- * @date: 2018/2/7
  * @description: shiro 配置类
  */
-
 @Configuration
 public class ShiroConfig {
 	
@@ -69,8 +66,7 @@ public class ShiroConfig {
 		filterChainDefinitionMap.put("/actuator/redis/**", "anon");
 		filterChainDefinitionMap.put("/test/jeecgDemo/demo3", "anon"); //模板测试
 		filterChainDefinitionMap.put("/test/jeecgDemo/redisDemo/**", "anon"); //redis测试
-		
-		
+
 		// 添加自己的过滤器并且取名为jwt
 		Map<String, Filter> filterMap = new HashMap<String, Filter>(1);
 		filterMap.put("jwt", new JwtFilter());
@@ -89,7 +85,6 @@ public class ShiroConfig {
 	public DefaultWebSecurityManager securityManager(ShiroRealm myRealm) {
 		DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
 		securityManager.setRealm(myRealm);
-
 		/*
 		 * 关闭shiro自带的session，详情见文档
 		 * http://shiro.apache.org/session-management.html#SessionManagement-
@@ -100,7 +95,6 @@ public class ShiroConfig {
 		defaultSessionStorageEvaluator.setSessionStorageEnabled(false);
 		subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
 		securityManager.setSubjectDAO(subjectDAO);
-
 		return securityManager;
 	}
 

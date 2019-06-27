@@ -18,10 +18,6 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 
     /**
      * 执行登录认证
-     * @param request
-     * @param response
-     * @param mappedValue
-     * @return
      */
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
@@ -46,10 +42,6 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
 
     /**
      * 对跨域提供支持
-     * @param request
-     * @param response
-     * @return
-     * @throws Exception
      */
     @Override
     protected boolean preHandle(ServletRequest request, ServletResponse response) throws Exception {
