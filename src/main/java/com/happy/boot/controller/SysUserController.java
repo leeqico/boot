@@ -1,5 +1,6 @@
 package com.happy.boot.controller;
 
+import com.happy.boot.common.Result;
 import com.happy.boot.entity.SysUser;
 import com.happy.boot.service.SysUserService;
 import lombok.extern.slf4j.Slf4j;
@@ -22,11 +23,11 @@ public class SysUserController {
     private SysUserService sysUserService;
 
     @GetMapping("/list")
-    public List<SysUser> list(){
+    public Result list(){
         log.info("查询开始！");
         List<SysUser> sysUsers = sysUserService.list();
         log.info("查询成功！");
-        return sysUsers;
+        return Result.success(sysUsers);
     }
 
 }
