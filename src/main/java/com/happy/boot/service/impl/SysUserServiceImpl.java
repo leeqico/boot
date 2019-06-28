@@ -1,5 +1,7 @@
 package com.happy.boot.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.happy.boot.entity.SysUser;
 import com.happy.boot.mapper.SysUserMapper;
 import com.happy.boot.service.SysUserService;
@@ -15,8 +17,8 @@ public class SysUserServiceImpl implements SysUserService {
     private SysUserMapper sysUserMapper;
 
     @Override
-    public List<SysUser> list() {
-        return sysUserMapper.selectList(null);
+    public IPage<SysUser> list(Page page) {
+        return sysUserMapper.selectPage(page,null);
     }
 
     @Override

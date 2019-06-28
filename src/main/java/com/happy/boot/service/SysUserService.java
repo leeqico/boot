@@ -1,5 +1,7 @@
 package com.happy.boot.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.happy.boot.entity.SysUser;
 
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
  */
 public interface SysUserService {
 
-    List<SysUser> list();
+    IPage<SysUser> list(Page page);
 
     SysUser getUserByName(String username);
 }

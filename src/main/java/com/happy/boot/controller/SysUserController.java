@@ -1,5 +1,7 @@
 package com.happy.boot.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.happy.boot.common.Result;
 import com.happy.boot.entity.SysUser;
 import com.happy.boot.service.SysUserService;
@@ -23,9 +25,9 @@ public class SysUserController {
     private SysUserService sysUserService;
 
     @GetMapping("/list")
-    public Result list(){
+    public Result list(Page page){
         log.info("查询开始！");
-        List<SysUser> sysUsers = sysUserService.list();
+        IPage<SysUser> sysUsers = sysUserService.list(page);
         log.info("查询成功！");
         return Result.success(sysUsers);
     }
