@@ -19,4 +19,4 @@ spring:
     port: 6379
 #mybatis plus 设置
 mybatis-plus:
-  mapper-locations: classpath*:com/happy/boot/**/xml/*Mapper.xml
+  mapper-locations: classpath*:com/happy/boot/mapper/xml/*Mapper.xml

@@ -1,7 +1,7 @@
 package com.happy.boot.shiro;
 
 import cn.hutool.core.util.StrUtil;
-import com.happy.boot.constant.CommonConstant;
+import com.happy.boot.common.constant.CommonConstant;
 import com.happy.boot.entity.SysUser;
 import com.happy.boot.service.SysUserService;
 import com.happy.boot.util.JwtUtil;

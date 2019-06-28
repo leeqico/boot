@@ -51,12 +51,12 @@ public class JwtUtil {
      * 生成签名,5min后过期
      *
      * @param username 用户名
-     * @param secret   用户的密码
+     * @param password   用户的密码
      * @return 加密的token
      */
-    public static String sign(String username, String secret) {
+    public static String sign(String username, String password) {
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
-        Algorithm algorithm = Algorithm.HMAC256(secret);
+        Algorithm algorithm = Algorithm.HMAC256(password);
         // 附带username信息
         return JWT.create().withClaim("username", username).withExpiresAt(date).sign(algorithm);
     }

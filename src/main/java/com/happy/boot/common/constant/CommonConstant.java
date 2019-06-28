@@ -1,4 +1,4 @@
-package com.happy.boot.constant;
+package com.happy.boot.common.constant;
 
 public interface CommonConstant {
     
