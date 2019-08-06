@@ -1,3 +1,8 @@
+# 创建数据库
+CREATE DATABASE IF NOT EXISTS boot DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci;
+
+# 创建表
+USE boot;
 DROP TABLE IF EXISTS sys_user;
 CREATE TABLE `sys_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
