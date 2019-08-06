@@ -3,7 +3,7 @@ package com.happy.boot.controller;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import com.happy.boot.common.Result;
-import com.happy.boot.common.constant.CommonConstant;
+import com.happy.boot.common.CommonConstant;
 import com.happy.boot.entity.SysUser;
 import com.happy.boot.model.LoginModel;
 import com.happy.boot.service.SysUserService;

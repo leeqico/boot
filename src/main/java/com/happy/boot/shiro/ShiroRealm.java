@@ -1,7 +1,7 @@
 package com.happy.boot.shiro;
 
 import cn.hutool.core.util.StrUtil;
-import com.happy.boot.common.constant.CommonConstant;
+import com.happy.boot.common.CommonConstant;
 import com.happy.boot.entity.SysUser;
 import com.happy.boot.service.SysUserService;
 import com.happy.boot.util.JwtUtil;
@@ -62,12 +62,12 @@ public class ShiroRealm extends AuthorizingRealm {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
 
         // 设置用户拥有的角色集合，比如“admin,test”,这里后续通过用户名查数据库
-        Set<String> roleSet = new HashSet<>();
+        Set<String> roleSet = new HashSet<String>();
         roleSet.add("admin");
         info.setRoles(roleSet);
 
         // 设置用户拥有的权限集合，比如“sys:role:add,sys:user:add”,这里后续通过用户名查数据库
-        Set<String> permissionSet = new HashSet<>();
+        Set<String> permissionSet = new HashSet<String>();
         permissionSet.add("sys:user:list");
         info.addStringPermissions(permissionSet);
 
